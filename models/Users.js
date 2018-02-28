@@ -22,6 +22,19 @@ const saveUser = (userData) => {
   });
 }
 
+
+const findOneUser = async () => {
+  try {
+    var user = User.findOne({});
+    return user;
+  } catch(err) {
+    console.log("Unable to find user", err);
+    throw new Error('Unable to find user');
+  }
+}
+
 module.exports = {
-  saveUser
+  saveUser,
+  findOneUser,
+  User
 }
