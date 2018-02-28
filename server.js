@@ -1,10 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const _ = require('lodash');
 const bodyParser = require('body-parser');
-const Users = require('./db/Users');
 
-mongoose.connect("mongodb://localhost:27017/CleanArchitecture");
+const mongoose = require('./db/mongoose');
+const Users = require('./models/Users');
 
 var app = new express();
 app.use(bodyParser.json());

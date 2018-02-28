@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/CleanArchitecture");
 
 const User = mongoose.model("Users", {
   fullname: String,
